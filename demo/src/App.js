@@ -1,7 +1,7 @@
 import FormToDo from "./components/FormToDo";
 import ToDoList from "./components/ToDoList";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [todo, setToDo] = useState([]);
@@ -19,6 +19,9 @@ function App() {
     setToDo(response.data);
    };
 
+   useEffect(()=>{
+    fetchData();
+   },[])
 
   return (
     <div>
