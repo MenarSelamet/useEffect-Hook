@@ -1,11 +1,14 @@
 import React from "react";
 
 function ToDoList({ toDo }) {
-  console.log(toDo)
   const list = toDo.map((task) => {
-  return ( <div key={task.id}>{task.tasks}</div>)
+    return (
+      <div className="item" key={task.id}>
+        - {task.tasks}
+      </div>
+    );
   });
-  return <div>{list}</div>
+  return <div className="finalList">{list}</div>;
 }
 
 export default ToDoList;

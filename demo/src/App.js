@@ -14,14 +14,14 @@ function App() {
     setToDo(updateToDo);
   };
 
-   const fetchData = async () => {
+  const fetchData = async () => {
     const response = await axios.get("http://127.0.0.1:3001/tasks");
     setToDo(response.data);
-   };
+  };
 
-   useEffect(()=>{
+  useEffect(() => {
     fetchData();
-   },[])
+  }, []);
 
   return (
     <div>
