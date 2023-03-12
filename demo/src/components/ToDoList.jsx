@@ -1,7 +1,11 @@
 import React from "react";
 
 function ToDoList({ toDo }) {
-  return <div key={toDo.id}>{toDo.tasks}</div>;
+  console.log(toDo)
+  const list = toDo.map((task) => {
+  return ( <div key={task.id}>{task.tasks}</div>)
+  });
+  return <div>{list}</div>
 }
 
 export default ToDoList;
