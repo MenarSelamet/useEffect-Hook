@@ -7,12 +7,19 @@ function App() {
   const [todo, setToDo ] = useState([])
 
  const addTask = async (tasks) => {
-    const response = await axios.post("http://localhost:3001/tasks", {
+    const response = await axios.post("http://127.0.0.1:3001/tasks", {
       tasks,
     });
     const updateToDo = [...todo , response.data];
     setToDo(updateToDo);
  }
+
+
+//  const fetchData = async () => {
+//   const response = await axios.get("http://127.0.0.1:3001/tasks");
+//   setToDo(response.data);
+//  }
+
 
   return (
     <div>
