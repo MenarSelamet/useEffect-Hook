@@ -1,9 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import CreateToDo from './components/CreateToDo'
 
 function App() {
+
+ 
+
   return (
-    <div>Hello World!</div>
+    <div><CreateToDo/></div>
+    
   )
 }
 
