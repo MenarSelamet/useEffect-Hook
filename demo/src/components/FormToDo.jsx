@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function FormToDo({addTask}) {
+function FormToDo({ addTask }) {
   const [task, setTask] = useState("");
 
   const handleChange = (event) => {
@@ -10,8 +10,8 @@ function FormToDo({addTask}) {
   const handleSubmit = (event) => {
     event.preventDefault();
     addTask(task);
-    setTask('');
-  }
+    setTask("");
+  };
 
   return (
     <div className="container">
