@@ -10,3 +10,13 @@ Content-Type: application/json
 {
     "tasks" : "eat"
 }
+
+
+###
+
+POST http://localhost:3001/tasks HTTP/1.1
+Content-Type: application/json
+
+{
+    "tasks" : "sleep"
+}
